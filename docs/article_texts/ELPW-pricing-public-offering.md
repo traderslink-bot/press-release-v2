@@ -1,5 +1,5 @@
 # ELPW
-n
+
 Link: https://www.prnewswire.com/news-releases/elong-power-holding-limited-announces-pricing-of-us7-0-million-public-offering-302698360.html
 Headline: Elong Power Holding Limited Announces Pricing of US$7.0 Million Public Offering
 Source: PR Newswire
