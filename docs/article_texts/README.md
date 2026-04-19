@@ -73,9 +73,40 @@ Especially preserve lines about:
 ## Current Workflow
 
 1. Paste articles into this folder.
-2. We review wording locally.
-3. We use the wording to tighten the PR timing engine.
-4. Later, when ready, we can build a small local test harness around these files.
+2. Add or update the article row in `pr_test_index.csv`.
+3. We review wording locally.
+4. We use the wording to tighten the PR timing engine.
+5. Later, when ready, we can build a small local test harness around these files.
+
+## Index And Usage Tracking
+
+Use:
+
+- `pr_test_index.csv`
+
+as both:
+
+- the article catalog
+- the usage tracker
+
+Important columns:
+
+- `local_file`
+- `offering_family`
+- `timing_pattern`
+- `expected_card_status`
+- `expected_earliest_line`
+- `special_flags`
+
+Codex usage tracking columns:
+
+- `used_for_language_review`
+- `used_for_phase1_logic`
+- `used_for_replay_test`
+- `last_used_at`
+- `usage_notes`
+
+This avoids having a separate drifting tracker for article usage.
 
 ## Important Note
 
