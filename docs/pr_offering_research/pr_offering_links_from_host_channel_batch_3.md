@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 3
+
+- `GFS` https://news.nuntiobot.com/article/054b6966-c52c-4152-b40c-95082a5f5933
+- `SEV` https://news.nuntiobot.com/article/c569f6f8-419f-4552-bc47-ae3cf0a0c756
+- `DOC` https://news.nuntiobot.com/article/f793e4b4-3ab4-4a06-b0ec-631f35176ab6
+- `LASE` https://news.nuntiobot.com/article/ae22bb05-d8fe-44a1-bfe5-b6549b6b8ea8
+- `GRDN` https://news.nuntiobot.com/article/47aba717-0d9c-4a82-88cd-da194a4b2ba0
+- `GRDN` https://news.nuntiobot.com/article/01101a34-9337-47a0-b68a-a22977e5b5d8
+- `NVGS` https://news.nuntiobot.com/article/4fe7139a-f6a8-4c48-9ef1-ea9ac9555212
+- `UMAC` https://news.nuntiobot.com/article/3638cff7-d53f-41bc-934f-67075df2fbcf
+- `FLOC` https://news.nuntiobot.com/article/f555db04-843b-465b-bcd6-1cfbde4a7f32
+- `PRZO` https://news.nuntiobot.com/article/ac07d12f-f558-4e78-946d-da3573b7e155
+- `EMPD` https://news.nuntiobot.com/article/d87ce10e-002d-49c6-800f-8172382e1441
+- `LNKS` https://news.nuntiobot.com/article/f66f41cd-ccc4-4e98-9e2c-0a699d9ed244
+- `APGE` https://news.nuntiobot.com/article/b97933a7-d137-4e31-9472-9d05f70315d7
+- `OTLK` https://news.nuntiobot.com/article/e7704f31-98e0-42ad-82c4-de80f49fd6f4
+- `SLGL` https://news.nuntiobot.com/article/68c075d9-d3f6-4ba8-b905-63f6b7c768ea
+- `LOBO` https://news.nuntiobot.com/article/b246d228-be71-4031-926b-fb2fa045d635
+- `OTLK` https://news.nuntiobot.com/article/d1f6c803-5239-462e-9262-77160aceb2d4
+- `KPTI` https://news.nuntiobot.com/article/2a75c309-d4de-4e51-acaf-0a0215f5e073
+- `FPS` https://news.nuntiobot.com/article/255342ae-6731-47c3-a2fd-09116be04a73
+- `NXTT` https://news.nuntiobot.com/article/b641acfb-4695-46b5-9693-21a431936736

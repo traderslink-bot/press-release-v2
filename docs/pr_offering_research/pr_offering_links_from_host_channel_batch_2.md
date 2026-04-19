@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 2
+
+- `TURB` https://news.nuntiobot.com/article/7dc62475-1f9e-4f95-939c-263fe0dc5783
+- `IXHL` https://news.nuntiobot.com/article/d61503e7-eb22-400c-a311-0f7522256ada
+- `IBG` https://news.nuntiobot.com/article/dfb2a2f3-07f0-438a-b356-c661fcb1dbe2
+- `JYD` https://news.nuntiobot.com/article/3f6ac54c-435b-4d77-8852-6f12bf900a10
+- `ABOS` https://news.nuntiobot.com/article/5d61941c-cefe-423d-8033-ae81b5d4afca
+- `ANRO` https://news.nuntiobot.com/article/efff4453-8f75-42e3-ba94-8ff961a3f412
+- `LAES` https://news.nuntiobot.com/article/a001887f-7ce7-4960-99a9-001e63d34c9b
+- `VEEE` https://news.nuntiobot.com/article/45017a80-bae4-4b7f-ae8e-02bdf6f797ef
+- `CTMX` https://news.nuntiobot.com/article/07b31d8e-7378-475f-af51-c93ae1894b08
+- `SABS` https://news.nuntiobot.com/article/8ae34078-202b-43cf-b608-7d84c600d853
+- `FMST` https://news.nuntiobot.com/article/bcace4c1-0c57-45ab-afb6-4ace8a8690b1
+- `SABS` https://news.nuntiobot.com/article/94affc03-5e06-4568-854d-95ed75569889
+- `CTMX` https://news.nuntiobot.com/article/7f1bb05f-2768-4d41-8078-7a95653730f0
+- `OVID` https://news.nuntiobot.com/article/c485abbc-18d1-48ea-b925-282e287033ff
+- `RNXT` https://news.nuntiobot.com/article/becd8ba3-e895-4a6e-acf3-619b96300c01
+- `RVPH` https://news.nuntiobot.com/article/a8b1e496-d9b0-43ba-8e6a-63ed484345bd
+- `RVPH` https://news.nuntiobot.com/article/0ef84927-0af6-4b0b-9995-629e6250085f
+- `HUMA` https://news.nuntiobot.com/article/11a7f644-68bf-4771-b4a6-17a59fd2f4b8
+- `CV` https://news.nuntiobot.com/article/6fc8cc23-4968-44c9-b05a-dd71e92ed9b5
+- `TPST` https://news.nuntiobot.com/article/31ea6953-0da7-434d-b4b5-bf22f51ccf82

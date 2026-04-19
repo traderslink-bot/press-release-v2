@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 5
+
+- `SAR` https://news.nuntiobot.com/article/5630acdc-d65e-49bd-bed9-eed813b11279
+- `GDS` https://news.nuntiobot.com/article/a1af6e2f-1ef4-4921-9926-17174d2c7f59
+- `VSEC` https://news.nuntiobot.com/article/07f3a364-4dc4-49ed-931f-ff1abfaa5b86
+- `CATX` https://news.nuntiobot.com/article/b0ea54ae-80f3-4dba-a0bf-bb5499874b00
+- `VVPR` https://news.nuntiobot.com/article/ba38ec68-ada6-4130-938a-ae3fd835a2d2
+- `ELPW` https://www.prnewswire.com/news-releases/elong-power-holding-limited-announces-pricing-of-us7-6-million-public-offering-302676409.html
+- `EP` https://news.nuntiobot.com/article/619f74e2-0687-475d-8334-11110dd4c95f
+- `VSEC` https://news.nuntiobot.com/article/9921690a-b2dd-4f3c-af0a-94ffc85498dc
+- `ARKO` https://news.nuntiobot.com/article/165bee0d-b7d6-4b8a-a2be-9cb2b051fc4e
+- `ANL` https://news.nuntiobot.com/article/01592e27-44e4-4c7f-9927-6f485ae58528
+- `SGMO` https://news.nuntiobot.com/article/1e50c5c3-0102-431f-a602-9d8f62f35e53
+- `LASR` https://www.businesswire.com/news/home/20260203903671/en/
+- `DSS` https://news.nuntiobot.com/article/1075d844-731a-48ec-b0b6-05fe7674a9cd
+- `LASR` https://news.nuntiobot.com/article/1aa43fe6-4336-49a2-a1b6-c65e1f17b9ac
+- `ACB` https://news.nuntiobot.com/article/1d1eaf41-5779-4687-a25a-30a8e329c4c6
+- `DSS` https://news.nuntiobot.com/article/a5471aca-9026-4e9f-9879-f4861062ca57
+- `LBPH` https://news.nuntiobot.com/article/a830b2a8-ede7-42dd-bb32-4b59ebed3011
+- `INAB` https://news.nuntiobot.com/article/bb10545d-d216-4d26-9a74-01ef6c81c7de
+- `CLGN` https://www.prnewswire.com/news-releases/collplant-biotechnologies-announces-2-0-million-registered-direct-offering-302680132.html
+- `BLMH` https://news.nuntiobot.com/article/c9df6564-f49b-4204-b845-b4a3537c87ba

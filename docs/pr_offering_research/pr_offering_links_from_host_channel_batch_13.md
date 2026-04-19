@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 13
+
+- `VNOM` https://news.nuntiobot.com/article/4c17bd93-3cde-4cb6-a700-92f984ca1995
+- `ALHC` https://news.nuntiobot.com/article/510e72b8-06db-4d17-8cf4-33372d673b89
+- `BTSG` https://news.nuntiobot.com/article/08082c23-0d5e-41b2-b021-3a4506137ab3
+- `MAIA` https://news.nuntiobot.com/article/3f6d17bf-eab4-4a66-8ea9-c0c2a7663acc
+- `VNOM` https://news.nuntiobot.com/article/cabc0844-3675-44db-8431-2a4790a5b1e3
+- `AS` https://news.nuntiobot.com/article/c3b0e177-37f0-42de-8f26-53bd90ee50eb
+- `HTO` https://news.nuntiobot.com/article/83d16277-2db9-4d7b-9661-c8ccd979d9af
+- `NRG` https://news.nuntiobot.com/article/412eae52-703b-46ce-b28a-b6ffed7f791f
+- `MDLN` https://news.nuntiobot.com/article/2c01e484-e41a-44b7-8f39-cf020f9df5c6
+- `MODD` https://news.nuntiobot.com/article/9ffd1a0f-35bc-42a8-b214-4772e97bb885
+- `INDI` https://news.nuntiobot.com/article/a80f52f1-402c-4c58-8ccc-a9902684da8a
+- `CANF` https://news.nuntiobot.com/article/b7fe2b81-8a38-4399-961e-50a75ea53083
+- `SHC` https://news.nuntiobot.com/article/7a24fee5-129f-44d3-a85c-67574dc03327
+- `CP` https://www.prnewswire.com/news-releases/cpkc-announces-us-1-2-billion-debt-offering-302704607.html
+- `MDLN` https://news.nuntiobot.com/article/8331fb6d-9c6e-47f9-9bd2-18ad94efba79
+- `ALOY` https://news.nuntiobot.com/article/ba155f4a-8b89-4aac-9f75-fd4313e0cadf
+- `INGM` https://news.nuntiobot.com/article/7f02224e-83d5-4145-9fdf-f979b9e259a0
+- `HAS` https://news.nuntiobot.com/article/daf35189-e7fa-41eb-8d28-069a85594b2b
+- `CLDI` https://news.nuntiobot.com/article/db76f7ea-893d-47a0-9100-8095589093e2
+- `MDT` https://news.nuntiobot.com/article/3430f78f-b19a-479d-a1ab-e090b07faad4

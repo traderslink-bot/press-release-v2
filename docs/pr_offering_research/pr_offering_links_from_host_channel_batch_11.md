@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 11
+
+- `BCAX` https://news.nuntiobot.com/article/c43660b0-a54c-4b2a-99c4-dcb5458ef2cb
+- `ZURA` https://www.businesswire.com/news/home/20260225821534/en/
+- `EP` https://news.nuntiobot.com/article/7accf7ac-1449-4505-87f6-9222e853ddde
+- `AIM` https://news.nuntiobot.com/article/b17587e8-c51e-49ff-a561-f2e5155d7807
+- `DFNS` https://news.nuntiobot.com/article/d8e319b9-4a2f-4dd3-bbe5-981895657eee
+- `LRMR` https://news.nuntiobot.com/article/3d11e266-c74c-4772-8f1a-0620e27f8415
+- `LYTS` https://news.nuntiobot.com/article/d957fe93-7375-47e2-8a41-ce040558f3e6
+- `MCB` https://news.nuntiobot.com/article/f0dec87d-d76d-45b2-909b-0052ed120ed4
+- `INVX` https://news.nuntiobot.com/article/30371ce9-08e4-47e1-9f95-84e99294621a
+- `LFST` https://news.nuntiobot.com/article/542a2330-90ca-4d1e-a1e1-0f58c8cd0720
+- `VGZ` https://news.nuntiobot.com/article/0aa72745-52b9-460c-8990-2c742fa37fef
+- `PVLA` https://news.nuntiobot.com/article/4597d135-4534-4e47-ae63-7ef20e1dfdf5
+- `DPRO` https://news.nuntiobot.com/article/31e9ad4e-6afd-4f18-88f0-d355a98ef90b
+- `LRMR` https://news.nuntiobot.com/article/606c5427-7d8a-460f-a319-aa1ffd481f70
+- `VIR` https://news.nuntiobot.com/article/00d3f249-0a7e-487d-b7c5-e37bbaea55d1
+- `INVX` https://news.nuntiobot.com/article/02bd7437-23be-49a5-a39e-9bb4ec40a770
+- `MCB` https://news.nuntiobot.com/article/6b8a4b70-4736-4657-a059-21ded61359e0
+- `MGN` https://news.nuntiobot.com/article/79341c89-773d-4851-bedd-6a75ff73b95e
+- `PFLT` https://news.nuntiobot.com/article/e4b1ddd9-863f-4189-a3c8-e811d16b8234
+- `ELPW` https://www.prnewswire.com/news-releases/elong-power-holding-limited-announces-pricing-of-us7-0-million-public-offering-302698360.html

@@ -4,6 +4,8 @@
 
 cache/
 docs/replay_results/
+docs/live_fetch_tracking/*.jsonl
+docs/_tmp_*.json
 
 node_modules/
 npm-debug.log*

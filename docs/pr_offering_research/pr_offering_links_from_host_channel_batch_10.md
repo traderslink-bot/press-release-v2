@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 10
+
+- `BANX` https://news.nuntiobot.com/article/fc82bc21-5e3a-48b2-b2f4-ec27866277ea
+- `TLSI` https://www.businesswire.com/news/home/20260219986800/en/
+- `WTTR` https://news.nuntiobot.com/article/5513a464-009b-4313-80e0-1dea70da0303
+- `AGIG` https://news.nuntiobot.com/article/bec57488-bc55-4ca6-8ee1-a22ff58afaf2
+- `BHAT` https://news.nuntiobot.com/article/04f3013f-1dbc-4097-bf0f-7cc9e303a907
+- `VEEE` https://news.nuntiobot.com/article/557926f3-982d-44ef-8067-6274ff137c62
+- `CADL` https://news.nuntiobot.com/article/60c0f97f-ae3e-4674-ade1-7c996335e4d6
+- `WTTR` https://www.prnewswire.com/news-releases/select-water-solutions-announces-pricing-of-public-offering-of-common-stock-302693371.html
+- `BTDR` https://news.nuntiobot.com/article/554bcd05-97dc-429f-9a3f-3363fc827be3
+- `TLSI` https://www.businesswire.com/news/home/20260220161665/en/
+- `ATOM` https://news.nuntiobot.com/article/5bf9a8eb-3f40-4a9a-b37d-d2262116ddda
+- `ABTS` https://news.nuntiobot.com/article/cf398811-ed9c-46aa-9036-a3768a5e4fbe
+- `IPWR` https://www.prnewswire.com/news-releases/ideal-power-announces-proposed-public-offering-of-common-stock-302694971.html
+- `NB` https://news.nuntiobot.com/article/12a2904c-7af8-4d71-9bf6-f3cf10376b55
+- `ALUR` https://news.nuntiobot.com/article/41a395be-e4a6-4ca9-9634-2a7cd5fdc6b7
+- `BCAX` https://news.nuntiobot.com/article/e60d0c9a-5734-4291-b8a2-2505f6919ef7
+- `ZURA` https://news.nuntiobot.com/article/438b77b7-ddc8-4966-9dff-ca8ec43dc25f
+- `VIR` https://www.businesswire.com/news/home/20260224282771/en/
+- `XWEL` https://news.nuntiobot.com/article/8937d989-8d20-4baa-ba05-fe68a89f1754
+- `TYGO` https://news.nuntiobot.com/article/8fdc18f0-8287-4dfe-bf0f-a13594ea8f2d

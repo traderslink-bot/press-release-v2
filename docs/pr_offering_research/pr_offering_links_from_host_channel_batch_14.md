@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 14
+
+- `MDT` https://www.prnewswire.com/news-releases/minimed-announces-pricing-of-initial-public-offering-302706144.html
+- `ALOY` https://news.nuntiobot.com/article/bfda80c2-28cc-4b7b-8aaa-cc1b552c57e1
+- `INGM` https://news.nuntiobot.com/article/b67cdd94-3d95-4e25-8c6f-84bbfe358c89
+- `MTEK` https://news.nuntiobot.com/article/acfdb996-d3ec-48bb-80c2-d8f5f83ffe8c
+- `HOOD` https://news.nuntiobot.com/article/f90604d6-e702-472e-819c-4d1db3925c87
+- `CLDI` https://news.nuntiobot.com/article/62a6ed93-cc7f-48bc-bd3e-ab22b750b43b
+- `SLDB` https://news.nuntiobot.com/article/f99de2a9-d4e5-4e96-be5b-af58d9a78674
+- `VCIG` https://news.nuntiobot.com/article/f4b3829f-fc96-459d-9ed4-fd0fa76072b8
+- `VENU` https://news.nuntiobot.com/article/9474a6a7-d75e-4390-a609-8c4fa2f4e56b
+- `VENU` https://news.nuntiobot.com/article/88e55bfd-d6f2-429c-b3c1-b732b36847fe
+- `ANTX` https://www.businesswire.com/news/home/20260309853686/en/
+- `RLMD` https://news.nuntiobot.com/article/1490cc1b-b507-4d0a-b3b8-f2536c902930
+- `KRRO` https://news.nuntiobot.com/article/4ed464d7-13c5-4320-9157-297d655217f0
+- `USEG` https://news.nuntiobot.com/article/7577d604-5273-4d76-85a8-9ae858045848
+- `DNTH` https://news.nuntiobot.com/article/d0f83e19-070a-414f-9eb4-3402ae442a31
+- `XENE` https://news.nuntiobot.com/article/1f52bce8-daca-4a38-9fcd-a13965ffdff9
+- `VEEE` https://news.nuntiobot.com/article/ee3e670a-0d81-48c4-982b-59e75cc81965
+- `DEC` https://news.nuntiobot.com/article/d93653bb-4647-4d8c-a03b-0bd9d7f52345
+- `DEC` https://news.nuntiobot.com/article/a3a4d67e-e7b5-4d24-b9d8-716be53d59d7
+- `MI` https://news.nuntiobot.com/article/690b6a07-e229-421f-b5b9-94636d699f42

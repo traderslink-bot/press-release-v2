@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 8
+
+- `CHRS` https://news.nuntiobot.com/article/88d97042-e6a1-40f5-8a75-51ab6da3d7ba
+- `AMKR` https://news.nuntiobot.com/article/8b8c32fb-a7e2-4594-942c-f09e6ded7894
+- `BURU` https://news.nuntiobot.com/article/fede45d9-0f2d-488b-b4ce-fb8fe7032dc6
+- `OKYO` https://news.nuntiobot.com/article/e72738af-a919-4039-973f-23c1f6849615
+- `CNVS` https://www.prnewswire.com/news-releases/cineverse-announces-pricing-of-3-0-million-public-offering-of-class-a-common-stock-302687220.html
+- `IMUX` https://news.nuntiobot.com/article/456c4de8-cf25-4075-9631-50d361fab624
+- `IRD` https://news.nuntiobot.com/article/00c8444b-6ebb-440f-987f-659d425c6356
+- `TULP` https://news.nuntiobot.com/article/5af94688-efcb-4729-a7d0-6cd4a1e1ef66
+- `RENX` https://news.nuntiobot.com/article/b7f79466-ef29-4d0c-a7fe-4e184b89ac20
+- `FIGR` https://news.nuntiobot.com/article/21adc86c-c261-4027-8106-822776296bce
+- `GPUS` https://www.prnewswire.com/news-releases/hyperscale-data-announces-at-the-market-offering-of-preferred-stock-302688035.html
+- `QTTB` https://news.nuntiobot.com/article/5f05767f-4d7c-4a40-b940-129513c0b8cc
+- `MYNZ` https://news.nuntiobot.com/article/12116516-0fdf-4554-9054-75996061eb9c
+- `CPS` https://news.nuntiobot.com/article/7407cd55-3f86-4a14-a027-3a0616e91436
+- `LIMN` https://news.nuntiobot.com/article/838e7049-dc69-4ca2-840a-0444ad9b26bd
+- `HOOD` https://news.nuntiobot.com/article/81360e5f-34bd-426b-b03c-f75475249578
+- `POR` https://news.nuntiobot.com/article/be918859-231e-4c6d-b137-a2ee1177bfac
+- `GTY` https://news.nuntiobot.com/article/b508aa12-f8c6-4960-8473-93c740f49ef4
+- `WPC` https://www.prnewswire.com/news-releases/w-p-carey-announces-public-offering-of-common-stock-302689956.html
+- `CMPS` https://news.nuntiobot.com/article/78c7b062-5f10-4706-9511-354c933aa0c4

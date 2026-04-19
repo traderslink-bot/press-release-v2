@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 6
+
+- `UPXI` https://news.nuntiobot.com/article/6ca68d21-62f8-412f-b21c-9c3ac1f66a9f
+- `ERNA` https://news.nuntiobot.com/article/15d926ea-15c1-4dd1-bbdf-c67f7df798b0
+- `LASE` https://news.nuntiobot.com/article/ee94dbb8-6131-463c-81f3-2a78b30a4991
+- `DC` https://news.nuntiobot.com/article/ceb8c063-d3e5-4acb-bea4-cc4f3967b48a
+- `FPS` https://news.nuntiobot.com/article/e17df165-020c-42df-ba87-9ef0a424fef2
+- `SVAC` https://news.nuntiobot.com/article/5ce474c9-ba95-48f0-ad61-1878884e8e63
+- `IVDA` https://news.nuntiobot.com/article/526bea18-6ea3-43ee-bce1-57aeb2f4a607
+- `NCI` https://news.nuntiobot.com/article/fd2fe8fa-3fac-41d4-a9ef-833b4a14dcdb
+- `DC` https://news.nuntiobot.com/article/62f57cc3-7ba1-4d81-907b-fa1048e67a05
+- `STRO` https://news.nuntiobot.com/article/fe6809d4-12d0-4e33-841b-461d5bd0ba72
+- `UOKA` https://www.prnewswire.com/news-releases/mdjm-ltd-announces-pricing-of-upsized-6-0-million-public-offering-302683796.html
+- `GLTO` https://news.nuntiobot.com/article/3dac7fae-204c-49fd-a7ef-c47b964f1043
+- `GAIN` https://news.nuntiobot.com/article/514f68d9-b7e9-49f5-bb3b-4dcec8c4f841
+- `NKTR` https://www.prnewswire.com/news-releases/nektar-therapeutics-announces-proposed-public-offering-302684299.html
+- `CURB` https://news.nuntiobot.com/article/942b28a4-bdfe-4f2a-951a-434cccebc0a1
+- `CURB` https://news.nuntiobot.com/article/e430cc2d-8128-42cc-be81-4d61e229252c
+- `GLTO` https://news.nuntiobot.com/article/aef80254-885a-41d8-b283-92da7f26d369
+- `NSRX` https://news.nuntiobot.com/article/251e3e9c-e7ad-479a-a5c4-a83b7ecdb13f
+- `ASBP` https://news.nuntiobot.com/article/fae883b7-f414-4d4a-9b48-a8aaca9724a8
+- `VHUB` https://news.nuntiobot.com/article/c7b67f36-9e07-48ba-96a1-d413b4ab9300

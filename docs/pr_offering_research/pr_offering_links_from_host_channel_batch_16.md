@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 16
+
+- `FLOC` https://news.nuntiobot.com/article/2b7142f9-577b-45cc-822d-b901e6b25937
+- `NVGS` https://news.nuntiobot.com/article/a485680f-a011-4cb7-a3da-7bca1bcb031e
+- `ONDS` https://news.nuntiobot.com/article/7b673522-91cb-472e-af27-c6a946fce679
+- `MDA` https://www.prnewswire.com/news-releases/mda-space-announces-exercise-of-over-allotment-option-in-initial-public-offering-in-the-united-states-302719823.html
+- `PAVS` https://www.prnewswire.com/news-releases/paranovus-entertainment-technology-limited-announces-pricing-of-5-million-registered-direct-offering-at-the-market-under-nasdaq-rules-302723887.html
+- `DOCN` https://news.nuntiobot.com/article/fdb0e46a-dacb-464a-9e83-72b29fdd2ac5
+- `APGE` https://news.nuntiobot.com/article/a0b018cf-8461-474e-9d56-50e401b1b214
+- `RCI` https://news.nuntiobot.com/article/961ba475-7199-479e-a02d-c96650dc3c86
+- `DOCN` https://news.nuntiobot.com/article/df065f55-9542-47d6-9b56-b4e4bac45811
+- `CBUS` https://news.nuntiobot.com/article/71bc6eba-b41c-4501-8bca-8d512979dfff
+- `HIT` https://www.prnewswire.com/news-releases/health-in-tech-announces-7-0-million-private-placement-302725416.html
+- `CBUS` https://news.nuntiobot.com/article/b2c3535b-eaa4-49a8-b600-778e779d86b0
+- `ICCM` https://www.prnewswire.com/news-releases/icecure-announces-pricing-of-4-0-million-registered-direct-offering-and-concurrent-private-placement-302726076.html
+- `POCI` https://news.nuntiobot.com/article/0f801f42-ee2d-423a-b234-2e4160289d9a
+- `DTCX` https://news.nuntiobot.com/article/7c3aa1c1-f7ab-4243-afde-173de2b8c065
+- `DTCX` https://news.nuntiobot.com/article/68714b1c-4c6a-44fb-906a-8354944285c4
+- `FPS` https://www.businesswire.com/news/home/20260327878753/en/
+- `POCI` https://news.nuntiobot.com/article/5dd57ac7-ffd8-4cdc-8d84-83787c6114e2
+- `VOR` https://news.nuntiobot.com/article/032df5c6-fde5-49ef-b83e-86917cf11f09
+- `OKUR` https://news.nuntiobot.com/article/f94c1263-37f1-4be9-b442-c25b3e95397b

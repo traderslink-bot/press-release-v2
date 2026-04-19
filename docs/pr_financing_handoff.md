@@ -219,3 +219,20 @@ Current temporary code posture:
 - Do not rely on Discord post formatting for PR-financing detection.
 - Do not overfit the PR prompt to one article.
 - Do not spend time making old replay dates behave like a perfect historical simulator.
+## Live Article Fallback Chain
+
+For non-SEC PR/article links, the live pipeline now resolves article content in this order:
+
+1. direct article fetch by the app
+2. OpenAI URL fallback using the Responses API with `web_search`
+3. headline/Discord-metadata-only fallback
+
+Tracking added:
+
+- `articleSourceMode` in processed results
+- `fetched_direct`
+- `openai_url_fallback`
+- `headline_only_fallback`
+- `sec_unreadable_fallback`
+
+Live article events are also appended to the local JSONL fetch log under the article-fetch cache directory so domain failures and fallback usage can be reviewed after market sessions.

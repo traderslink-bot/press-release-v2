@@ -1,0 +1,22 @@
+# PR Offering Links From Host Channel Batch 12
+
+- `APWC` https://news.nuntiobot.com/article/8c8269fb-5664-4a5c-904f-1cb3da936c94
+- `VGZ` https://news.nuntiobot.com/article/38b86286-0cb6-4c9e-8144-a4e6af7f9d1a
+- `HCTI` https://www.prnewswire.com/news-releases/healthcare-triangle-announces-approximately-3-959-million-registered-direct-financing-of-common-stock-priced-at-the-market-under-nasdaq-rules-302698956.html
+- `BK` https://www.prnewswire.com/news-releases/bny-announces-pricing-of-public-offering-of-500-000-000-of-depositary-shares-representing-interests-in-preferred-stock-302699024.html
+- `KTOS` https://news.nuntiobot.com/article/e9e5d656-2dd9-4395-83cb-3fda7d704ec9
+- `DUOT` https://news.nuntiobot.com/article/aeeeef69-dac1-4565-8304-342656002d49
+- `DUOT` https://news.nuntiobot.com/article/cc6b98c0-acb3-41cb-940d-6b2c86c93992
+- `KTOS` https://news.nuntiobot.com/article/0af794d4-1baa-4d3f-87ad-b69a474a6330
+- `ALBT` https://news.nuntiobot.com/article/2456fb7f-9f7b-43ad-8f79-87c1b4a7bc53
+- `LYTS` https://news.nuntiobot.com/article/04e25f60-5aca-4da8-80be-0d3102d0149c
+- `BKKT` https://news.nuntiobot.com/article/123b8a60-b2c3-4d2f-a810-91fc97a87cbc
+- `VNET` https://www.prnewswire.com/news-releases/vnet-announces-us138-million-private-placement-302699647.html
+- `UOKA` https://www.prnewswire.com/news-releases/mdjm-ltd-announces-pricing-of-2-5-million-registered-direct-offering-302699864.html
+- `YYGH` https://news.nuntiobot.com/article/a6c430a5-1b77-4816-bcc6-26837e7243eb
+- `HTO` https://news.nuntiobot.com/article/073e66a3-2810-4653-bc4b-34c35a9476f3
+- `AS` https://news.nuntiobot.com/article/a2d448c2-71cb-4cfe-b3df-aad915e50a59
+- `NRG` https://news.nuntiobot.com/article/dc75ba08-3fcc-45c3-8c46-2dce06daf6b9
+- `BTSG` https://news.nuntiobot.com/article/86ea34da-e0a2-4d72-8a06-0aed41e7d3c4
+- `ALHC` https://news.nuntiobot.com/article/3b6641ec-f15f-4b13-a939-328b6c2022d8
+- `MAIA` https://news.nuntiobot.com/article/4f391cc3-e5c3-460c-9cef-2881012e7ce8
