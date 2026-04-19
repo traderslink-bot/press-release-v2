@@ -4,13 +4,6 @@ Use this file to keep a short list of articles that still need to be pasted into
 
 ## Suggested First Articles
 
-- `CBUS` proposed offering
-- `CBUS` pricing offering
-- `DTCX` proposed offering
-- `DTCX` pricing offering
-- `FLOC` selling-stockholder offering
-- `NVGS` secondary with concurrent repurchase
-
 ## Status
 
 - Added:
@@ -22,5 +15,11 @@ Use this file to keep a short list of articles that still need to be pasted into
   - `DOCN-pricing-public-offering.md`
   - `PAVS-rd-at-the-market-plus-private-warrants.md`
   - `OKUR-oversubscribed-private-placement.md`
+  - `CBUS-proposed-public-offering.md`
+  - `CBUS-pricing-public-offering.md`
+  - `DTCX-proposed-public-offering.md`
+  - `DTCX-pricing-public-offering.md`
+  - `FLOC-selling-stockholder-offering-plus-repurchase.md`
+  - `NVGS-secondary-offering-plus-concurrent-repurchase.md`
 - Add new article filenames here as they are pasted.
 - Remove lines once the article has its own file.
