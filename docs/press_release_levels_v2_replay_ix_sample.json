@@ -1,0 +1,23 @@
+[
+  {
+    "id": "replay-sec-ix-1",
+    "ticker": "IPW",
+    "rawText": "17:27 SEC IPW - Form S-1MEF - Link",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1830072/000168316826003054/ipower_s1mef.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-ix-2",
+    "ticker": "FRMM",
+    "rawText": "08:38 SEC FRMM - Form 8-K - Link",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1690080/000121390026044927/ea0286791-8k_forum.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-ix-3",
+    "ticker": "BBGI",
+    "rawText": "13:27 SEC BBGI - Form SCHEDULE 13G - Link",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1099160/000196638626000003/xslSCHEDULE_13G_X02/primary_doc.xml",
+    "routeTag": "default"
+  }
+]

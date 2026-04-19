@@ -1,0 +1,14 @@
+[
+  {
+    "ticker": "BEAT",
+    "filingTypeHint": "424B5",
+    "rawText": "21:55 SEC BEAT - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1779372/000121390026044264/0001213900-26-044264-index.htm"
+  },
+  {
+    "ticker": "ALLO",
+    "filingTypeHint": "424B5",
+    "rawText": "16:33 SEC ALLO - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1737287/000119312526157128/0001193125-26-157128-index.htm"
+  }
+]

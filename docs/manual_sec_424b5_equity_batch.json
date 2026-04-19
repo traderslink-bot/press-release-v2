@@ -1,0 +1,37 @@
+[
+  {
+    "id": "replay-sec-424b5-przo",
+    "ticker": "PRZO",
+    "rawText": "07:20 SEC PRZO - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1916241/000121390026033215/0001213900-26-033215-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-empd",
+    "ticker": "EMPD",
+    "rawText": "08:46 SEC EMPD - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1829794/000168316826002135/0001683168-26-002135-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-veee",
+    "ticker": "VEEE",
+    "rawText": "10:01 SEC VEEE - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1855509/000173112226000474/0001731122-26-000474-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-slgl",
+    "ticker": "SLGL",
+    "rawText": "17:14 SEC SLGL - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1684693/000117891326001626/0001178913-26-001626-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-tanh",
+    "ticker": "TANH",
+    "rawText": "09:16 SEC TANH - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1588084/000147793226001565/0001477932-26-001565-index.htm",
+    "routeTag": "default"
+  }
+]

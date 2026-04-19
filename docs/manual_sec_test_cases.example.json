@@ -1,0 +1,14 @@
+[
+  {
+    "ticker": "IPW",
+    "filingTypeHint": "S-1MEF",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1830072/000168316826003054/ipower_s1mef.htm"
+  },
+  {
+    "ticker": "GLND",
+    "filingTypeHint": "S-1/A",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2093507/000182912626003582/0001829126-26-003582-index.htm",
+    "float": "26.2 M",
+    "marketCap": "226 M"
+  }
+]

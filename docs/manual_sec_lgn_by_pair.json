@@ -1,0 +1,16 @@
+[
+  {
+    "id": "replay-sec-valid-1",
+    "ticker": "LGN",
+    "rawText": "21:12 SEC LGN - Form S-1MEF - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2052568/000119312526146017/0001193125-26-146017-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-valid-2",
+    "ticker": "BY",
+    "rawText": "16:31 SEC BY - Form S-3ASR - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1702750/000119312526145618/0001193125-26-145618-index.htm",
+    "routeTag": "default"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "replay-sec-atm-cdt",
+    "ticker": "CDT",
+    "rawText": "16:15 SEC CDT - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1896212/000149315226014923/0001493152-26-014923-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-atm-kytx",
+    "ticker": "KYTX",
+    "rawText": "16:48 SEC KYTX - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1994702/000119312526140377/0001193125-26-140377-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-atm-inm",
+    "ticker": "INM",
+    "rawText": "16:17 SEC INM - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1728328/000121390026039938/0001213900-26-039938-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-atm-nktx",
+    "ticker": "NKTX",
+    "rawText": "17:29 SEC NKTX - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1787400/000114036126013179/0001140361-26-013179-index.htm",
+    "routeTag": "default"
+  }
+]

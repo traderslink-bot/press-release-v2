@@ -1,0 +1,19 @@
+[
+  {
+    "id": "replay-sec-glnd-1",
+    "ticker": "GLND",
+    "rawText": "09:29 SEC GLND - Form S-1/A - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2093507/000182912626003582/0001829126-26-003582-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-trvi-1",
+    "ticker": "TRVI",
+    "rawText": "11:30 ? TRVI < $16 ~ | Float: 82.5 M | IO: 71.21% | MC: 1.9 B | SI: 18.6% a day ago SEC Form 8-K - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1563880/000119312526160355/0001193125-26-160355-index.htm",
+    "routeTag": "default",
+    "float": "82.5 M",
+    "io": "71.21%",
+    "marketCap": "1.9 B"
+  }
+]

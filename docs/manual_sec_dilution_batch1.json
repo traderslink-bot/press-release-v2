@@ -1,0 +1,26 @@
+[
+  {
+    "ticker": "BEAT",
+    "filingTypeHint": "424B5",
+    "rawText": "21:55 SEC BEAT - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1779372/000121390026044264/0001213900-26-044264-index.htm"
+  },
+  {
+    "ticker": "BYAH",
+    "filingTypeHint": "F-3",
+    "rawText": "07:11 SEC BYAH - Form F-3 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1986247/000121390026044324/0001213900-26-044324-index.htm"
+  },
+  {
+    "ticker": "ACXP",
+    "filingTypeHint": "424B5",
+    "rawText": "08:13 SEC ACXP - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1736243/000110465926044092/0001104659-26-044092-index.htm"
+  },
+  {
+    "ticker": "JEM",
+    "filingTypeHint": "F-1/A",
+    "rawText": "17:10 SEC JEM - Form F-1/A - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2018222/000149315226016578/0001493152-26-016578-index.htm"
+  }
+]

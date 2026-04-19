@@ -1,0 +1,77 @@
+[
+    {
+        "ticker":  "SEV",
+        "rawText":  "SEV - Aptera Motors Announces a Warrant Inducement Transaction for $6.3 Million in Gross Proceeds",
+        "articleLink":  "https://news.nuntiobot.com/article/c569f6f8-419f-4552-bc47-ae3cf0a0c756"
+    },
+    {
+        "ticker":  "TURB",
+        "rawText":  "TURB - TURBO ENERGY ANNOUNCES $3.25 MILLION REGISTERED DIRECT OFFERING WITH A SINGLE GLOBAL INSTITUTIONAL INVESTOR",
+        "articleLink":  "https://news.nuntiobot.com/article/7dc62475-1f9e-4f95-939c-263fe0dc5783"
+    },
+    {
+        "ticker":  "ABOS",
+        "rawText":  "ABOS - Acumen Pharmaceuticals Announces $35.75 Million Private Placement to Advance Potential Best-in-Class Molecules from Amyloid Beta Oligomer-Selective Enhanced Brain Delivery Portfolio",
+        "articleLink":  "https://news.nuntiobot.com/article/5d61941c-cefe-423d-8033-ae81b5d4afca"
+    },
+    {
+        "ticker":  "CTMX",
+        "rawText":  "CTMX - CytomX Therapeutics Announces Proposed Public Offering of Common Stock and Pre-Funded Warrants",
+        "articleLink":  "https://news.nuntiobot.com/article/07b31d8e-7378-475f-af51-c93ae1894b08"
+    },
+    {
+        "ticker":  "CTMX",
+        "rawText":  "CTMX - CytomX Therapeutics Announces Pricing of $250 Million Offering of Common Stock and Pre-Funded Warrants",
+        "articleLink":  "https://news.nuntiobot.com/article/7f1bb05f-2768-4d41-8078-7a95653730f0"
+    },
+    {
+        "ticker":  "UMAC",
+        "rawText":  "UMAC - Unusual Machines, Inc. Announces Proposed Public Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/3638cff7-d53f-41bc-934f-67075df2fbcf"
+    },
+    {
+        "ticker":  "CV",
+        "rawText":  "CV - CapsoVision Announces $14 Million Private Placement Financing",
+        "articleLink":  "https://news.nuntiobot.com/article/6fc8cc23-4968-44c9-b05a-dd71e92ed9b5"
+    },
+    {
+        "ticker":  "TPST",
+        "rawText":  "TPST - Tempest Therapeutics Announces Up To $6 Million Private Placement",
+        "articleLink":  "https://news.nuntiobot.com/article/31ea6953-0da7-434d-b4b5-bf22f51ccf82"
+    },
+    {
+        "ticker":  "EMPD",
+        "rawText":  "EMPD - Empery Digital Announces $25 Million Registered Direct Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/d87ce10e-002d-49c6-800f-8172382e1441"
+    },
+    {
+        "ticker":  "LNKS",
+        "rawText":  "LNKS - Linkers Industries Announces Pricing of $16 Million Best Efforts Public Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/f66f41cd-ccc4-4e98-9e2c-0a699d9ed244"
+    },
+    {
+        "ticker":  "APGE",
+        "rawText":  "APGE - Apogee Therapeutics, Inc. Announces Proposed $300 Million Underwritten Public Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/b97933a7-d137-4e31-9472-9d05f70315d7"
+    },
+    {
+        "ticker":  "OTLK",
+        "rawText":  "OTLK - Outlook Therapeutics Announces Proposed Public Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/e7704f31-98e0-42ad-82c4-de80f49fd6f4"
+    },
+    {
+        "ticker":  "OTLK",
+        "rawText":  "OTLK - Outlook Therapeutics Announces Pricing of $5.0 Million Public Offering",
+        "articleLink":  "https://news.nuntiobot.com/article/d1f6c803-5239-462e-9262-77160aceb2d4"
+    },
+    {
+        "ticker":  "KPTI",
+        "rawText":  "KPTI - Karyopharm Announces $30 Million Private Placement with RA Capital",
+        "articleLink":  "https://www.prnewswire.com/news-releases/karyopharm-announces-30-million-private-placement-with-ra-capital-302723247.html"
+    },
+    {
+        "ticker":  "SLGL",
+        "rawText":  "SLGL - Sol-Gel Technologies Ltd. Announces Pricing of Oversubscribed Underwritten Offering",
+        "articleLink":  "https://www.globenewswire.com/news-release/2026/03/24/3260929/0/en/Sol-Gel-Technologies-Ltd-Announces-Pricing-of-Oversubscribed-Underwritten-Offering.html"
+    }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ticker": "BEAT",
+    "filingTypeHint": "424B5",
+    "rawText": "21:55 SEC BEAT - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1779372/000121390026044264/0001213900-26-044264-index.htm"
+  },
+  {
+    "ticker": "WGRX",
+    "filingTypeHint": "S-3",
+    "rawText": "17:23 SEC WGRX - Form S-3 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2030763/000149315226016876/0001493152-26-016876-index.htm"
+  },
+  {
+    "ticker": "JEM",
+    "filingTypeHint": "F-1/A",
+    "rawText": "17:10 SEC JEM - Form F-1/A - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2018222/000149315226016578/0001493152-26-016578-index.htm"
+  },
+  {
+    "ticker": "XHG",
+    "filingTypeHint": "424B5",
+    "rawText": "16:38 SEC XHG - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1769256/000121390026044666/0001213900-26-044666-index.htm"
+  }
+]

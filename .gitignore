@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.press_release_v2.example
+
+cache/
+docs/replay_results/
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+*.pyc
+__pycache__/

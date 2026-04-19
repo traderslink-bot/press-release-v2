@@ -1,0 +1,37 @@
+[
+  {
+    "id": "replay-sec-424b5-lac",
+    "ticker": "LAC",
+    "rawText": "08:40 SEC LAC - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1966983/000119312526115210/0001193125-26-115210-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-raya",
+    "ticker": "RAYA",
+    "rawText": "14:07 SEC RAYA - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1825875/000118518526000939/0001185185-26-000939-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-umac",
+    "ticker": "UMAC",
+    "rawText": "16:14 SEC UMAC - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1956955/000168316826002022/0001683168-26-002022-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-ctmx",
+    "ticker": "CTMX",
+    "rawText": "16:05 SEC CTMX - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1501989/000119312526113931/0001193125-26-113931-index.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-424b5-cyn",
+    "ticker": "CYN",
+    "rawText": "13:02 SEC CYN - Form 424B5 - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1874097/000121390026028909/0001213900-26-028909-index.htm",
+    "routeTag": "default"
+  }
+]

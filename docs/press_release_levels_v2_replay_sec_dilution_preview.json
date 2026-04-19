@@ -1,0 +1,16 @@
+[
+  {
+    "id": "replay-sec-dilution-ipw-1",
+    "ticker": "IPW",
+    "rawText": "17:27 SEC IPW - Form S-1MEF - Link",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1830072/000168316826003054/ipower_s1mef.htm",
+    "routeTag": "default"
+  },
+  {
+    "id": "replay-sec-dilution-glnd-1",
+    "ticker": "GLND",
+    "rawText": "09:29 SEC GLND - Form S-1/A - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/2093507/000182912626003582/0001829126-26-003582-index.htm",
+    "routeTag": "default"
+  }
+]

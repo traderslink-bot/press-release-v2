@@ -1,0 +1,19 @@
+[
+  {
+    "id": "replay-sec-current-1",
+    "ticker": "TRVI",
+    "rawText": "11:30 TRVI < $16 ~ | Float: 82.5 M | IO: 71.21% | MC: 1.9 B | SEC Form 8-K - Link",
+    "articleLink": "https://www.sec.gov/Archives/edgar/data/1563880/000119312526160355/0001193125-26-160355-index.htm",
+    "routeTag": "default",
+    "float": "82.5 M",
+    "io": "71.21%",
+    "marketCap": "1.9 B"
+  },
+  {
+    "id": "replay-sec-current-2",
+    "ticker": "FRMM",
+    "rawText": "08:38 SEC FRMM - Form 8-K - Link",
+    "articleLink": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1690080/000121390026044927/ea0286791-8k_forum.htm",
+    "routeTag": "default"
+  }
+]
