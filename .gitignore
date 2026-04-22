@@ -3,6 +3,7 @@
 !.env.press_release_v2.example
 
 cache/
+data/
 docs/replay_results/
 docs/live_fetch_tracking/*.jsonl
 docs/_tmp_*.json

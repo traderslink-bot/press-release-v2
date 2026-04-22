@@ -318,6 +318,131 @@ Recommended next steps for the next session:
    - test new links the user provides
    - refine only when a real live/manual case exposes a clear problem
 
+## Live State Update - 2026-04-21
+
+This section is the practical current-state note for the latest live runtime changes.
+
+### Current v2 Discord Formatting
+
+The current `v2` embed format is now:
+
+- title:
+  - `$TICKER`
+- description:
+  - blank spacer under title
+  - bold article headline
+  - snapshot line with:
+    - `Float`
+    - `IO`
+    - `MC`
+    - `Filing Type`
+  - optional dilution block with bold labels
+  - summary text
+  - a description-bottom spacer so the gap above `Positives` looks cleaner
+- fields:
+  - `Positives`
+  - `Negatives`
+  - levels block
+  - `SEC Filing Link` only for SEC posts
+
+Current formatting rules:
+
+- no `Signal Details` block in `v2`
+- no bottom Nuntio/non-SEC link in `v2`
+- title is not linked
+- levels render as:
+  - `**Resistance:** ...`
+  - `**Support:** ...`
+  - blank line
+  - `Data generated during ...`
+
+### Current Levels Source Behavior
+
+The shared source script `levels/levels_clean_output.py` now emits:
+
+- bold inline labels for:
+  - `**Resistance:** ...`
+  - `**Support:** ...`
+- no old disclaimer block
+- `Data generated during ...` only
+
+The `v2` formatter and `scanner_levels.js` were updated to support both:
+
+- old two-line levels format
+- new inline bold-label format
+
+### Current Fallback Output Behavior
+
+For non-SEC posts that fall back because the article body could not be fetched:
+
+- live Discord output should no longer disclose phrases like:
+  - `Article text unavailable; summary based on raw Discord metadata.`
+  - `Full article text unavailable ...`
+- fallback-status negatives like:
+  - `Full article text unavailable to verify details and scope ...`
+  are also stripped from the live post
+
+Important:
+
+- this is output suppression only
+- the ingest DB / fetch logs still retain the real fallback mode for debugging
+
+### Example Real Failure Observed
+
+`GTLB` on 2026-04-21 around 4:30 PM ET failed because:
+
+- direct fetch to BusinessWire returned `403`
+- then OpenAI URL fallback also failed
+- final `articleSourceMode` became:
+  - `headline_only_fallback`
+
+This was confirmed in:
+
+- `docs/live_fetch_tracking/live_events.jsonl`
+- `data/press_release_ingest.sqlite`
+
+### Current Resilience Improvements
+
+The live runtime now includes:
+
+- delayed requeue for retryable OpenAI failures
+  - one deferred retry after 60 seconds
+- supervisor loop around the live Discord bot
+  - automatically restarts after crash/exit
+- watcher heartbeat from the injected Discord page script
+- periodic visible-message rescans
+- long-idle warnings when no host messages have been detected for an unusual amount of time
+
+This does not guarantee that every missed host post can be proven after the fact, but it is better than the earlier state where a stale page could sit silently.
+
+### Current OpenAI Runtime Settings
+
+`.env.press_release_v2` was updated to:
+
+- `OPENAI_TIMEOUT_MS="45000"`
+- `OPENAI_MAX_RETRIES="3"`
+
+Reason:
+
+- the previous `25000` / `2` setting was too fragile for live runs
+
+### Deleted / Removed Tooling
+
+The temporary delete scripts that were created during Discord-channel cleanup experiments were removed:
+
+- `delete_v2_webhook_posts.js`
+- `delete_tracked_v2_posts.js`
+
+The old-post cleanup problem was resolved manually by the user.
+
+### Handoff Reminder
+
+If a new chat starts without memory, use:
+
+- `docs/handoff_2026-04-21.md`
+
+as the first practical state file to read.
+
 PR-financing work has now started.
 
 Current first-pass PR financing routing supports:
