@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-2026-07-02-aapl",
+    "ticker": "AAPL",
+    "title": "Example headline for local dry-run only",
+    "summary": "This example item exists only to validate the Stocktwits compose flow in dry-run mode. Do not use it for live posting.",
+    "message": "$AAPL Example headline for local dry-run only\n\nThis example item exists only to validate the Stocktwits compose flow in dry-run mode. Do not use it for live posting.",
+    "sentiment": "",
+    "scheduledAt": "2026-01-01T00:00:00.000Z",
+    "status": "pending",
+    "postedAt": "",
+    "error": ""
+  }
+]

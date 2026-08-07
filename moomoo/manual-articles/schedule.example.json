@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": "manual-article-001",
+      "file": "articles/example-article.docx",
+      "scheduledAt": "2026-07-27T09:30:00-04:00",
+      "source": "manual_article",
+      "topGainers": {
+        "enabled": true,
+        "count": 3,
+        "file": "moomoo/manual-articles/top-gainers.json"
+      }
+    }
+  ]
+}

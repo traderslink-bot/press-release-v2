@@ -4,9 +4,18 @@ const Database = require("better-sqlite3");
 const {
   HOST_CHANNEL_URL,
   DISCORD_WEBHOOK_URL,
-  SPIKE_WEBHOOK_URL,
   WEBHOOK_OVERRIDE_URL,
   WEBHOOK_OVERRIDE_DILUTION_ONLY,
+  MARKET_CAP_HOST_CHANNEL_URL,
+  MARKET_CAP_UNDER_30M_WEBHOOK_URL,
+  MARKET_CAP_30M_TO_50M_WEBHOOK_URL,
+  MARKET_CAP_30M_TO_50M_MIN,
+  MARKET_CAP_30M_TO_50M_LIMIT,
+  MARKET_CAP_50M_TO_100M_WEBHOOK_URL,
+  MARKET_CAP_50M_TO_100M_MIN,
+  MARKET_CAP_50M_TO_100M_LIMIT,
+  MARKET_CAP_MAX_EVENT_AGE_MS,
+  HOST_DISCORD_MAX_EVENT_AGE_MS,
   ARTICLE_CACHE_DIR,
   ARTICLE_FETCH_LOG_FILE,
   INGEST_DATABASE_PATH,
@@ -34,12 +43,69 @@ function summarizeChecks(checks) {
   };
 }
 
+function redactConfiguredTargets(targets) {
+  return {
+    count: Array.isArray(targets) ? targets.filter(Boolean).length : 0,
+    configured: Array.isArray(targets) ? targets.filter(Boolean).map(() => "<configured>") : []
+  };
+}
+
 async function run() {
   const checks = [];
 
   checks.push(check(Boolean(resolvedEnvFile && fs.existsSync(resolvedEnvFile)), "Env file resolved", resolvedEnvFile));
   checks.push(check(Boolean(HOST_CHANNEL_URL), "Host channel URL configured", HOST_CHANNEL_URL || null));
-  checks.push(check(Boolean(DISCORD_WEBHOOK_URL || WEBHOOK_OVERRIDE_URL), "Default webhook path configured", WEBHOOK_OVERRIDE_URL || DISCORD_WEBHOOK_URL || null));
+  checks.push(check(
+    String(HOST_CHANNEL_URL || "").includes("/1139240765260836936"),
+    "PR filtered-news host channel matches expected",
+    HOST_CHANNEL_URL || null
+  ));
+  checks.push(check(
+    String(MARKET_CAP_HOST_CHANNEL_URL || "").includes("/1280514882676199506"),
+    "Market-cap under-30M host channel matches expected",
+    MARKET_CAP_HOST_CHANNEL_URL || null
+  ));
+  checks.push(check(
+    Number(MARKET_CAP_MAX_EVENT_AGE_MS) > 0 && Number(MARKET_CAP_MAX_EVENT_AGE_MS) <= 30000,
+    "Market-cap scanner freshness window is tight",
+    MARKET_CAP_MAX_EVENT_AGE_MS
+  ));
+  checks.push(check(
+    Number(HOST_DISCORD_MAX_EVENT_AGE_MS) === 2 * 60 * 60 * 1000,
+    "Host news recovery cutoff is 2 hours",
+    HOST_DISCORD_MAX_EVENT_AGE_MS
+  ));
+  checks.push(check(Boolean(DISCORD_WEBHOOK_URL || WEBHOOK_OVERRIDE_URL), "Default webhook path configured", {
+    defaultWebhookConfigured: Boolean(DISCORD_WEBHOOK_URL),
+    overrideWebhookConfigured: Boolean(WEBHOOK_OVERRIDE_URL)
+  }));
+  checks.push(check(Boolean(MARKET_CAP_UNDER_30M_WEBHOOK_URL), "Market-cap under-30M webhook configured", {
+    configured: Boolean(MARKET_CAP_UNDER_30M_WEBHOOK_URL)
+  }));
+  checks.push(check(Boolean(MARKET_CAP_30M_TO_50M_WEBHOOK_URL), "Market-cap 30M-to-50M webhook configured", {
+    configured: Boolean(MARKET_CAP_30M_TO_50M_WEBHOOK_URL)
+  }));
+  checks.push(check(Boolean(MARKET_CAP_50M_TO_100M_WEBHOOK_URL), "Market-cap 50M-to-100M webhook configured", {
+    configured: Boolean(MARKET_CAP_50M_TO_100M_WEBHOOK_URL)
+  }));
+  checks.push(check(
+    Number(MARKET_CAP_30M_TO_50M_MIN) === 30000000 &&
+      Number(MARKET_CAP_30M_TO_50M_LIMIT) === 50000000,
+    "Market-cap 30M-to-50M band is above 30M through 50M",
+    {
+      minExclusive: MARKET_CAP_30M_TO_50M_MIN,
+      maxInclusive: MARKET_CAP_30M_TO_50M_LIMIT
+    }
+  ));
+  checks.push(check(
+    Number(MARKET_CAP_50M_TO_100M_MIN) === 50000000 &&
+      Number(MARKET_CAP_50M_TO_100M_LIMIT) === 100000000,
+    "Market-cap 50M-to-100M band is above 50M through 100M",
+    {
+      minExclusive: MARKET_CAP_50M_TO_100M_MIN,
+      maxInclusive: MARKET_CAP_50M_TO_100M_LIMIT
+    }
+  ));
   checks.push(check(Boolean(ARTICLE_CACHE_DIR), "Article cache dir configured", ARTICLE_CACHE_DIR));
   checks.push(check(Boolean(ARTICLE_FETCH_LOG_FILE), "Live fetch log path configured", ARTICLE_FETCH_LOG_FILE));
   checks.push(check(Array.isArray(ARTICLE_SHARED_CACHE_READ_ONLY_HOSTS), "Shared-cache host list parsed", ARTICLE_SHARED_CACHE_READ_ONLY_HOSTS));
@@ -64,9 +130,13 @@ async function run() {
   );
 
   const defaultTargets = getWebhookTargets("default", { canDiluteToday: null, earliestDilution: null });
-  const spikeTargets = getWebhookTargets("spike", { canDiluteToday: null, earliestDilution: null });
-  checks.push(check(defaultTargets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "Default route has webhook target(s)", defaultTargets));
-  checks.push(check(spikeTargets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "Spike route has webhook target(s)", spikeTargets));
+  const under30Targets = getWebhookTargets("market_cap_under_30m", { canDiluteToday: null, earliestDilution: null });
+  const midCapTargets = getWebhookTargets("market_cap_30m_to_50m", { canDiluteToday: null, earliestDilution: null });
+  const upperCapTargets = getWebhookTargets("market_cap_50m_to_100m", { canDiluteToday: null, earliestDilution: null });
+  checks.push(check(defaultTargets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "Default route has webhook target(s)", redactConfiguredTargets(defaultTargets)));
+  checks.push(check(under30Targets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "Under-30M route has webhook target(s)", redactConfiguredTargets(under30Targets)));
+  checks.push(check(midCapTargets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "30M-to-50M route has webhook target(s)", redactConfiguredTargets(midCapTargets)));
+  checks.push(check(upperCapTargets.length > 0 || Boolean(WEBHOOK_OVERRIDE_URL), "50M-to-100M route has webhook target(s)", redactConfiguredTargets(upperCapTargets)));
   checks.push(check(true, "Webhook override mode", {
     overrideUrlSet: Boolean(WEBHOOK_OVERRIDE_URL),
     overrideDilutionOnly: WEBHOOK_OVERRIDE_DILUTION_ONLY

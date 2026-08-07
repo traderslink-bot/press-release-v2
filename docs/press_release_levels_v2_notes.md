@@ -63,7 +63,7 @@ Every processed post still goes to the main webhook:
 
 Additional routing is based on the Discord message header text:
 
-- posts with `Spike` in the header also go to `SPIKE_WEBHOOK_URL`
+- posts with `Spike` in the header are still tagged internally for review/routing diagnostics, but no separate spike webhook is used
 - posts with `Drop` in the header also go to `DROP_WEBHOOK_URL`
 
 The route signal is read from the message header username area, for example:
@@ -442,6 +442,105 @@ If a new chat starts without memory, use:
 - `docs/handoff_2026-04-21.md`
 
 as the first practical state file to read.
+
+## Live State Update - 2026-05-24
+
+This section records the current news/website-link channel work.
+
+### Website-First Discord Flow
+
+The bot now supports publishing processed news articles to the live website before sending the Discord alert.
+
+Required local bot env:
+
+- `NEWS_ARTICLE_API_URL`
+  - production value should point to `https://traderslink.pro/api/news/articles`
+- `NEWS_PUBLISH_TOKEN`
+  - must match the production website env var of the same name
+  - do not commit or print the value
+- `NEWS_PUBLISH_TIMEOUT_MS`
+
+Required website/Vercel env:
+
+- `NEWS_PUBLISH_TOKEN`
+
+This token is not a Vercel account token. It is a shared secret for the website article publish API only.
+
+When `NEWS_ARTICLE_API_URL` is configured, the live Discord post becomes minimal:
+
+- ticker symbol
+- available metadata such as market cap, float, and I/O
+- headline
+- link to the website article page
+
+The full AI summary, positives, negatives, snapshot, and other article details belong on the website article page.
+
+### Market-Cap Channel Routing
+
+The market-cap host watcher now supports multiple market-cap bands.
+
+Implemented route tags:
+
+- `market_cap_under_30m`
+  - posts to `MARKET_CAP_UNDER_30M_WEBHOOK_URL`
+  - matches market cap `<= MARKET_CAP_UNDER_30M_LIMIT`
+  - default limit is `30000000`
+- `market_cap_30m_to_50m`
+  - posts to `MARKET_CAP_30M_TO_50M_WEBHOOK_URL`
+  - matches market cap `> MARKET_CAP_30M_TO_50M_MIN`
+  - matches market cap `<= MARKET_CAP_30M_TO_50M_LIMIT`
+  - default min is `30000000`
+  - default limit is `50000000`
+
+Boundary behavior:
+
+- exactly 30M stays in the under-30M route
+- above 30M through exactly 50M goes to the 30M-to-50M route
+- above 50M is currently out of band and skipped by the market-cap watcher
+
+Market-cap feed events are intentionally unfiltered by the News Filtered opportunity gate. The market-cap route itself is the first routing decision, and `buildPostingDecision()` allows market-cap feed routes with the `market_cap_feed_unfiltered` reason.
+
+### BusinessWire / No-Text Behavior
+
+For non-SEC sources where article text is unavailable, the pipeline should not send the item to OpenAI for full summary generation.
+
+Current intended behavior:
+
+- no article text means no website article is published
+- Discord links to the original user-facing source when available
+- NuntioBot helper URLs are not sent to Discord
+- BusinessWire headline-only items can still post as source links when appropriate
+
+### Off-Hours Test Result
+
+Because the market was closed, the new 30M-to-50M channel was tested with a stored local event instead of the live Discord watcher.
+
+Tested stored event:
+
+- ticker: `GMM`
+- market cap: `44.6 M`
+- forced route tag: `market_cap_30m_to_50m`
+- source mode: cached Nuntio article text, then website publish
+
+Result:
+
+- website publish succeeded
+- Discord minimal post succeeded in the new 30M-to-50M channel
+- live article URL returned HTTP 200:
+  - `https://traderslink.pro/news/GMM/gmm-s-gausspeed-links-to-150k-3d-asset-library-via-nvidia-omniverse-openusd-2026-05-24`
+
+Operational note:
+
+- the first test attempt failed with Discord `401 Invalid Webhook Token` because the local `.env.press_release_v2` webhook line had extra env settings appended onto the same line
+- the local env line was corrected so `MARKET_CAP_30M_TO_50M_WEBHOOK_URL`, `MARKET_CAP_30M_TO_50M_MIN`, and `MARKET_CAP_30M_TO_50M_LIMIT` are separate lines
+
+Verification run:
+
+- `node --check` on changed JavaScript files
+- `node current_feature_regression_check.js`
+  - passed `24/24`
+- `node smoke_test_v2.js`
+  - passed `21/21`
 
 PR-financing work has now started.
 

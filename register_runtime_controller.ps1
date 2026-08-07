@@ -4,16 +4,19 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$controllerPath = Join-Path $projectRoot "runtime_controller.js"
-$nodePath = (Get-Command node.exe -ErrorAction Stop).Source
+$runtimeManagerPath = Join-Path $projectRoot "manage-press-release-runtime.ps1"
+$powershellPath = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
 
-if (-not (Test-Path -LiteralPath $controllerPath)) {
-  throw "Runtime controller not found: $controllerPath"
+if (-not (Test-Path -LiteralPath $runtimeManagerPath)) {
+  throw "Runtime manager not found: $runtimeManagerPath"
+}
+if (-not (Test-Path -LiteralPath $powershellPath)) {
+  throw "Windows PowerShell not found: $powershellPath"
 }
 
 $action = New-ScheduledTaskAction `
-  -Execute $nodePath `
-  -Argument ('"{0}"' -f $controllerPath) `
+  -Execute $powershellPath `
+  -Argument ('-NoProfile -ExecutionPolicy Bypass -File "{0}" -Action ScheduledStart' -f $runtimeManagerPath) `
   -WorkingDirectory $projectRoot
 
 $trigger = New-ScheduledTaskTrigger `
@@ -27,7 +30,7 @@ $settings = New-ScheduledTaskSettingsSet `
   -DontStopIfGoingOnBatteries `
   -ExecutionTimeLimit (New-TimeSpan -Hours 18) `
   -MultipleInstances IgnoreNew `
-  -Priority 4
+  -Priority 3
 
 $principal = New-ScheduledTaskPrincipal `
   -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) `
@@ -40,7 +43,7 @@ Register-ScheduledTask `
   -Trigger $trigger `
   -Settings $settings `
   -Principal $principal `
-  -Description "Runs the Press Release V2 and scanner controller weekdays from 3:55 AM to 8:00 PM Eastern." `
+  -Description "Restores the Press Release V2 controller and health watchdog weekdays at 3:55 AM Eastern." `
   -Force | Out-Null
 
 $task = Get-ScheduledTask -TaskName $TaskName
@@ -49,7 +52,7 @@ $info = Get-ScheduledTaskInfo -TaskName $TaskName
   TaskName = $task.TaskName
   State = $task.State
   NextRunTime = $info.NextRunTime
-  Executable = $nodePath
-  Controller = $controllerPath
+  Executable = $powershellPath
+  RuntimeManager = $runtimeManagerPath
   Schedule = "Monday-Friday, 3:55 AM-8:00 PM Eastern"
 }
