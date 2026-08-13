@@ -335,6 +335,48 @@ function buildComposerBody(post) {
   return message.replace(new RegExp(`^\\$?${cleanText(post?.ticker || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s+${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*`, "i"), "").trim() || message;
 }
 
+function normalizeComposerText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function countComposerBodyOccurrences(editorText, composerBody) {
+  const haystack = normalizeComposerText(editorText);
+  const needle = normalizeComposerText(composerBody);
+  if (!needle) return 0;
+
+  let count = 0;
+  let offset = 0;
+  while (offset <= haystack.length - needle.length) {
+    const foundAt = haystack.indexOf(needle, offset);
+    if (foundAt < 0) break;
+    count += 1;
+    offset = foundAt + needle.length;
+  }
+  return count;
+}
+
+async function clearAndFillComposerBody(page, composeLocator, composerBody, postTickers) {
+  await composeLocator.click({ timeout: 5000 }).catch(async () => {
+    await composeLocator.evaluate(element => element.focus()).catch(() => null);
+  });
+  await page.keyboard.press(process.platform === "darwin" ? "Meta+A" : "Control+A").catch(() => null);
+  await page.keyboard.press("Backspace").catch(() => null);
+
+  if (shouldInsertStockCodeTag()) {
+    const stockCodeTag = await insertStockCodeTags(page, composeLocator, postTickers);
+    if (!stockCodeTag.ok) return stockCodeTag;
+    await page.keyboard.insertText(composerBody);
+    return { ok: true, stockCodeTags: stockCodeTag.tickers };
+  }
+
+  await composeLocator.fill(composerBody, { timeout: 5000 }).catch(async () => {
+    await composeLocator.evaluate(element => element.focus()).catch(() => null);
+    await page.keyboard.press(process.platform === "darwin" ? "Meta+A" : "Control+A").catch(() => null);
+    await page.keyboard.insertText(composerBody);
+  });
+  return { ok: true, stockCodeTags: [] };
+}
+
 async function insertStockCodeTag(page, composeLocator, ticker, options = {}) {
   const normalizedTicker = cleanText(ticker || "").replace(/^\$/, "").replace(/\.US$/i, "").toUpperCase();
   if (!normalizedTicker) return { ok: false, reason: "missing ticker for stock-code tag insertion" };
@@ -1088,36 +1130,18 @@ async function prepareComposer(page, post) {
     });
   }
 
-  try {
-    await composeBox.locator.click({ timeout: 5000 });
-  } catch (_) {
-    await composeBox.locator.click({ timeout: 5000, force: true }).catch(async () => {
-      await composeBox.locator.evaluate(element => element.focus());
-    });
+  const initialFill = await clearAndFillComposerBody(page, composeBox.locator, composerBody, postTickers);
+  if (!initialFill.ok) {
+    const screenshot = await saveScreenshot(page, "stock-code-tag-not-inserted");
+    return {
+      ok: false,
+      reason: initialFill.reason,
+      screenshot,
+      composeSelector: composeBox.candidate.label,
+      stockCodeTag: initialFill
+    };
   }
-
-  let stockCodeTag = null;
-  let stockCodeTags = [];
-  if (shouldInsertStockCodeTag()) {
-    stockCodeTag = await insertStockCodeTags(page, composeBox.locator, postTickers);
-    if (!stockCodeTag.ok) {
-      const screenshot = await saveScreenshot(page, "stock-code-tag-not-inserted");
-      return {
-        ok: false,
-        reason: stockCodeTag.reason,
-        screenshot,
-        composeSelector: composeBox.candidate.label,
-        stockCodeTag
-      };
-    }
-    stockCodeTags = stockCodeTag.tickers;
-    await page.keyboard.insertText(composerBody);
-  } else {
-    await composeBox.locator.fill(composerBody, { timeout: 5000 }).catch(async () => {
-      await page.keyboard.press(process.platform === "darwin" ? "Meta+A" : "Control+A");
-      await page.keyboard.insertText(composerBody);
-    });
-  }
+  let stockCodeTags = initialFill.stockCodeTags;
   logEvent("info", "moomoo compose body fill attempted.", {
     bodyLength: composerBody.length,
     composeSelector: composeBox.candidate.label,
@@ -1125,11 +1149,16 @@ async function prepareComposer(page, post) {
   });
 
   let filledText = await readLocatorText(composeBox.locator);
-  if (!filledText.includes(composerBody.slice(0, Math.min(20, composerBody.length)))) {
-    await composeBox.locator.evaluate(element => element.focus()).catch(() => null);
-    await page.keyboard.press(process.platform === "darwin" ? "Meta+A" : "Control+A").catch(() => null);
-    await page.keyboard.insertText(composerBody).catch(() => null);
+  let bodyOccurrences = countComposerBodyOccurrences(filledText, composerBody);
+  if (bodyOccurrences !== 1) {
+    const rebuilt = await clearAndFillComposerBody(page, composeBox.locator, composerBody, postTickers);
+    if (!rebuilt.ok) {
+      const screenshot = await saveScreenshot(page, "compose-rebuild-failed");
+      return { ok: false, reason: rebuilt.reason, screenshot, composeSelector: composeBox.candidate.label };
+    }
+    stockCodeTags = rebuilt.stockCodeTags;
     filledText = await readLocatorText(composeBox.locator);
+    bodyOccurrences = countComposerBodyOccurrences(filledText, composerBody);
   }
   const titleText = titleVisible ? await readLocatorText(titleBox) : "";
   if (titleVisible && !titleText.includes(composerTitle.slice(0, Math.min(20, composerTitle.length)))) {
@@ -1143,15 +1172,15 @@ async function prepareComposer(page, post) {
     };
   }
 
-  const expectedPrefix = composerBody.slice(0, Math.min(40, composerBody.length));
-  if (!filledText.includes(expectedPrefix)) {
+  if (bodyOccurrences !== 1) {
     const screenshot = await saveScreenshot(page, "compose-fill-not-verified");
     return {
       ok: false,
-      reason: "compose fill could not be verified",
+      reason: `compose body must appear exactly once before posting; found ${bodyOccurrences} copies`,
       screenshot,
       composeSelector: composeBox.candidate.label,
-      filledTextPreview: filledText.slice(0, 200)
+      filledTextPreview: filledText.slice(0, 200),
+      bodyOccurrences
     };
   }
 
