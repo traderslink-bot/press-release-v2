@@ -1209,10 +1209,10 @@ function runExternalFreeNewsBotPayloadCase() {
       headline: "IMCC announces processed news"
     },
     newsPublishResult: {
-      articleUrl: "https://traderslink.pro/news/IMCC/example-release",
-      freeArticleUrl: "https://traderslink.pro/news/free/IMCC/example-release"
+      articleUrl: "https://app.traderslink.pro/news/IMCC/example-release",
+      freeArticleUrl: "https://app.traderslink.pro/news/free/IMCC/example-release"
     },
-    articleUrl: "https://traderslink.pro/news/IMCC/example-release"
+    articleUrl: "https://app.traderslink.pro/news/IMCC/example-release"
   });
   let accepted = false;
   let serialized = "";
@@ -1230,7 +1230,7 @@ function runExternalFreeNewsBotPayloadCase() {
     type: "discord_free_news_bot_boundary",
     pass:
       accepted === true &&
-      payload?.content?.includes("https://traderslink.pro/news/free/IMCC/example-release") &&
+      payload?.content?.includes("https://app.traderslink.pro/news/free/IMCC/example-release") &&
       !serialized.includes("discord.com/channels/") &&
       !serialized.includes("news.nuntiobot.com") &&
       !serialized.includes("api/webhooks") &&

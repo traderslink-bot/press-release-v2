@@ -454,17 +454,17 @@ The bot now supports publishing processed news articles to the live website befo
 Required local bot env:
 
 - `NEWS_ARTICLE_API_URL`
-  - production value should point to `https://traderslink.pro/api/news/articles`
+  - production value should point to `https://app.traderslink.pro/api/news/articles`
 - `NEWS_PUBLISH_TOKEN`
   - must match the production website env var of the same name
   - do not commit or print the value
 - `NEWS_PUBLISH_TIMEOUT_MS`
 
-Required website/Vercel env:
+Required Railway env:
 
 - `NEWS_PUBLISH_TOKEN`
 
-This token is not a Vercel account token. It is a shared secret for the website article publish API only.
+This token is not a Railway account token. It is a shared secret for the website article publish API only.
 
 When `NEWS_ARTICLE_API_URL` is configured, the live Discord post becomes minimal:
 

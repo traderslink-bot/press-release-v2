@@ -147,8 +147,8 @@ Market-cap feed setup:
 
 Website publish setup:
 
-- `NEWS_ARTICLE_API_URL` should point to `https://traderslink.pro/api/news/articles` for production.
-- `NEWS_PUBLISH_TOKEN` must match the website's production `NEWS_PUBLISH_TOKEN` in Vercel.
+- `NEWS_ARTICLE_API_URL` should point to `https://app.traderslink.pro/api/news/articles` for production.
+- `NEWS_PUBLISH_TOKEN` must match Railway's production `NEWS_PUBLISH_TOKEN`.
 - `NEWS_PUBLISH_TOKEN` is a publish-endpoint shared secret, not a Vercel account token.
 - Keep the token out of source control and do not print it in logs.
 - Successful website publishes are tracked locally from the deployment of this feature onward; there is no historical backfill.

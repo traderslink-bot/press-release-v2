@@ -96,7 +96,7 @@ function main() {
   if (command === "test-post") {
     const articleUrl =
       args.articleUrl ||
-      "https://traderslink.pro/news/free/TEST/free-news-bot-permission-test";
+      "https://app.traderslink.pro/news/free/TEST/free-news-bot-permission-test";
     const payload = {
       content: [
         "**$TEST**",

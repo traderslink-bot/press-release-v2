@@ -4,7 +4,7 @@ This is the installable free-tier Discord delivery path for external server admi
 
 The bot is intentionally limited to the free news dump stream. By default it receives the current press-release/news route tags in one channel, and it is disabled unless `DISCORD_FREE_NEWS_BOT_ENABLED=true` and `DISCORD_BOT_TOKEN` are configured.
 
-The external bot is a delivery adapter, not a Discord mirror. It never reads from the host Discord channels and should never receive host channel URLs, webhook URLs, `news.nuntiobot.com` links, SEC/source URLs, or legacy embeds. It only receives a processed minimal payload that links to a `https://traderslink.pro/news/free/...` article page.
+The external bot is a delivery adapter, not a Discord mirror. It never reads from the host Discord channels and should never receive host channel URLs, webhook URLs, `news.nuntiobot.com` links, SEC/source URLs, or legacy embeds. It only receives a processed minimal payload that links to a `https://app.traderslink.pro/news/free/...` article page.
 
 It does not post scanner second-server posts, `drop` posts, webhook-override/test posts, or fallback source-link posts. Paid installs can still use filtered destination channels and full article pages.
 
@@ -72,7 +72,7 @@ node .\free_news_discord_bot.js register --guild-id 123456789012345678 --channel
 Send a one-time permission test to that channel:
 
 ```powershell
-node .\free_news_discord_bot.js test-post --guild-id 123456789012345678 --channel-id 234567890123456789 --article-url "https://traderslink.pro/news/free/NNOX/example-article"
+node .\free_news_discord_bot.js test-post --guild-id 123456789012345678 --channel-id 234567890123456789 --article-url "https://app.traderslink.pro/news/free/NNOX/example-article"
 ```
 
 The registry is stored locally at `data/free_news_discord_subscribers.json` unless `DISCORD_FREE_NEWS_SUBSCRIBERS_FILE` points somewhere else.
@@ -94,7 +94,7 @@ node .\free_news_discord_bot.js status
 Send a permission test:
 
 ```powershell
-node .\free_news_discord_bot.js test-post --channel-id 234567890123456789 --article-url "https://traderslink.pro/news/free/NNOX/example-article"
+node .\free_news_discord_bot.js test-post --channel-id 234567890123456789 --article-url "https://app.traderslink.pro/news/free/NNOX/example-article"
 ```
 
 Remove a subscriber:
