@@ -7,7 +7,7 @@ Only eligible Discord alerts with a completed AI summary are published to the ap
 
 ### AI-summary routing
 
-Publish a TradersLink article only when OpenAI generated a summary. When no AI summary exists, keep the normal destination route and post the original source URL in Discord with only `Summary could not be generated.` as the summary line. Do not create, link, or route a TradersLink article without an AI summary. This runs only in the local Press Release watcher and requires coordinator-sequenced runner activation.
+Publish a TradersLink article only when OpenAI generated a summary. When no AI summary exists, keep the normal destination route and post the original article title with its direct source URL in Discord so Discord can render the source article tile. Do not create, link, or route a TradersLink article without an AI summary. This runs only in the local Press Release watcher and requires coordinator-sequenced runner activation.
 
 ## News Filtered
 

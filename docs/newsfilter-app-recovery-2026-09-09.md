@@ -6,7 +6,7 @@ The owner requires coordinator sequencing before any runtime reload or recovery 
 
 Owner-corrected rule: publish a TradersLink article only when an AI summary was generated. When no AI summary exists, do not create a TradersLink article and send Discord directly to the original source URL.
 
-Routing correction: valid host-server articles without an AI summary remain in their normal destination route. Discord shows only `Summary could not be generated.` and links directly to the original source. Activate only through the coordinator's local-runner sequence.
+Routing correction: valid host-server articles without an AI summary remain in their normal destination route. Discord shows the original article title and a direct source URL so the source article tile can render. Activate only through the coordinator's local-runner sequence.
 
 Owner authorized fixing retrieval and ensuring alerts sent to Discord also reach the app.
 
