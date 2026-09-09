@@ -1,0 +1,6 @@
+[
+  { "ticker": "ABC", "percentChange": 87.2 },
+  { "ticker": "XYZ", "percentChange": 42.1 },
+  { "ticker": "MOMO", "percentChange": 31.8 },
+  { "ticker": "AAPL", "percentChange": 2.4 }
+]

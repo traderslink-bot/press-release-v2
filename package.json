@@ -1,0 +1,37 @@
+{
+  "name": "press-release-levels-v2-local-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dry-run": "node stocktwits/automator.js dry-run",
+    "post-next": "node stocktwits/automator.js post-next",
+    "run-once": "node stocktwits/automator.js run-once",
+    "stocktwits:session-check": "node stocktwits/automator.js session-check",
+    "stocktwits:enqueue": "node stocktwits/enqueue.js",
+    "stocktwits:backfill-processed": "node stocktwits/backfill-processed.js",
+    "stocktwits:batch-test": "node stocktwits/run-live-batch.js",
+    "stocktwits:live-worker": "node stocktwits/live-worker.js",
+    "stocktwits:worker-status": "node stocktwits/worker-status.js",
+    "stocktwits:qa": "node stocktwits/qa-check.js",
+    "stocktwits:login-chrome": "node stocktwits/open-login-chrome.js",
+    "moomoo:login-chrome": "node moomoo/open-login-chrome.js",
+    "moomoo:session-check": "node moomoo/automator.js session-check",
+    "moomoo:dry-run": "node moomoo/automator.js dry-run",
+    "moomoo:post-next": "node moomoo/automator.js post-next",
+    "moomoo:run-once": "node moomoo/automator.js run-once",
+    "moomoo:live-worker": "node moomoo/live-worker.js",
+    "moomoo:manual-queue": "node moomoo/queue-manual-articles.js --once",
+    "moomoo:manual-scheduler": "node moomoo/queue-manual-articles.js",
+    "moomoo:manual-tasks-preview": "node moomoo/install-manual-article-tasks.js",
+    "moomoo:manual-install-tasks": "node moomoo/install-manual-article-tasks.js --install",
+    "moomoo:manual-delete-tasks": "node moomoo/install-manual-article-tasks.js --delete",
+    "moomoo:manual-worker": "node moomoo/live-worker.js --source manual_article",
+    "moomoo:worker-status": "node moomoo/worker-status.js",
+    "moomoo:qa": "node moomoo/qa-check.js",
+    "stocktwits:install-browser": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.56.1"
+  }
+}

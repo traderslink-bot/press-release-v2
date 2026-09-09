@@ -63,7 +63,7 @@ Every processed post still goes to the main webhook:
 
 Additional routing is based on the Discord message header text:
 
-- posts with `Spike` in the header also go to `SPIKE_WEBHOOK_URL`
+- posts with `Spike` in the header are still tagged internally for review/routing diagnostics, but no separate spike webhook is used
 - posts with `Drop` in the header also go to `DROP_WEBHOOK_URL`
 
 The route signal is read from the message header username area, for example:
@@ -317,6 +317,230 @@ Recommended next steps for the next session:
 4. Keep SEC work as a secondary lane:
    - test new links the user provides
    - refine only when a real live/manual case exposes a clear problem
+
+## Live State Update - 2026-04-21
+
+This section is the practical current-state note for the latest live runtime changes.
+
+### Current v2 Discord Formatting
+
+The current `v2` embed format is now:
+
+- title:
+  - `$TICKER`
+- description:
+  - blank spacer under title
+  - bold article headline
+  - snapshot line with:
+    - `Float`
+    - `IO`
+    - `MC`
+    - `Filing Type`
+  - optional dilution block with bold labels
+  - summary text
+  - a description-bottom spacer so the gap above `Positives` looks cleaner
+- fields:
+  - `Positives`
+  - `Negatives`
+  - levels block
+  - `SEC Filing Link` only for SEC posts
+
+Current formatting rules:
+
+- no `Signal Details` block in `v2`
+- no bottom Nuntio/non-SEC link in `v2`
+- title is not linked
+- levels render as:
+  - `**Resistance:** ...`
+  - `**Support:** ...`
+  - blank line
+  - `Data generated during ...`
+
+### Current Levels Source Behavior
+
+The shared source script `levels/levels_clean_output.py` now emits:
+
+- bold inline labels for:
+  - `**Resistance:** ...`
+  - `**Support:** ...`
+- no old disclaimer block
+- `Data generated during ...` only
+
+The `v2` formatter and `scanner_levels.js` were updated to support both:
+
+- old two-line levels format
+- new inline bold-label format
+
+### Current Fallback Output Behavior
+
+For non-SEC posts that fall back because the article body could not be fetched:
+
+- live Discord output should no longer disclose phrases like:
+  - `Article text unavailable; summary based on raw Discord metadata.`
+  - `Full article text unavailable ...`
+- fallback-status negatives like:
+  - `Full article text unavailable to verify details and scope ...`
+  are also stripped from the live post
+
+Important:
+
+- this is output suppression only
+- the ingest DB / fetch logs still retain the real fallback mode for debugging
+
+### Example Real Failure Observed
+
+`GTLB` on 2026-04-21 around 4:30 PM ET failed because:
+
+- direct fetch to BusinessWire returned `403`
+- then OpenAI URL fallback also failed
+- final `articleSourceMode` became:
+  - `headline_only_fallback`
+
+This was confirmed in:
+
+- `docs/live_fetch_tracking/live_events.jsonl`
+- `data/press_release_ingest.sqlite`
+
+### Current Resilience Improvements
+
+The live runtime now includes:
+
+- delayed requeue for retryable OpenAI failures
+  - one deferred retry after 60 seconds
+- supervisor loop around the live Discord bot
+  - automatically restarts after crash/exit
+- watcher heartbeat from the injected Discord page script
+- periodic visible-message rescans
+- long-idle warnings when no host messages have been detected for an unusual amount of time
+
+This does not guarantee that every missed host post can be proven after the fact, but it is better than the earlier state where a stale page could sit silently.
+
+### Current OpenAI Runtime Settings
+
+`.env.press_release_v2` was updated to:
+
+- `OPENAI_TIMEOUT_MS="45000"`
+- `OPENAI_MAX_RETRIES="3"`
+
+Reason:
+
+- the previous `25000` / `2` setting was too fragile for live runs
+
+### Deleted / Removed Tooling
+
+The temporary delete scripts that were created during Discord-channel cleanup experiments were removed:
+
+- `delete_v2_webhook_posts.js`
+- `delete_tracked_v2_posts.js`
+
+The old-post cleanup problem was resolved manually by the user.
+
+### Handoff Reminder
+
+If a new chat starts without memory, use:
+
+- `docs/handoff_2026-04-21.md`
+
+as the first practical state file to read.
+
+## Live State Update - 2026-05-24
+
+This section records the current news/website-link channel work.
+
+### Website-First Discord Flow
+
+The bot now supports publishing processed news articles to the live website before sending the Discord alert.
+
+Required local bot env:
+
+- `NEWS_ARTICLE_API_URL`
+  - production value should point to `https://app.traderslink.pro/api/news/articles`
+- `NEWS_PUBLISH_TOKEN`
+  - must match the production website env var of the same name
+  - do not commit or print the value
+- `NEWS_PUBLISH_TIMEOUT_MS`
+
+Required Railway env:
+
+- `NEWS_PUBLISH_TOKEN`
+
+This token is not a Railway account token. It is a shared secret for the website article publish API only.
+
+When `NEWS_ARTICLE_API_URL` is configured, the live Discord post becomes minimal:
+
+- ticker symbol
+- available metadata such as market cap, float, and I/O
+- headline
+- link to the website article page
+
+The full AI summary, positives, negatives, snapshot, and other article details belong on the website article page.
+
+### Market-Cap Channel Routing
+
+The market-cap host watcher now supports multiple market-cap bands.
+
+Implemented route tags:
+
+- `market_cap_under_30m`
+  - posts to `MARKET_CAP_UNDER_30M_WEBHOOK_URL`
+  - matches market cap `<= MARKET_CAP_UNDER_30M_LIMIT`
+  - default limit is `30000000`
+- `market_cap_30m_to_50m`
+  - posts to `MARKET_CAP_30M_TO_50M_WEBHOOK_URL`
+  - matches market cap `> MARKET_CAP_30M_TO_50M_MIN`
+  - matches market cap `<= MARKET_CAP_30M_TO_50M_LIMIT`
+  - default min is `30000000`
+  - default limit is `50000000`
+
+Boundary behavior:
+
+- exactly 30M stays in the under-30M route
+- above 30M through exactly 50M goes to the 30M-to-50M route
+- above 50M is currently out of band and skipped by the market-cap watcher
+
+Market-cap feed events are intentionally unfiltered by the News Filtered opportunity gate. The market-cap route itself is the first routing decision, and `buildPostingDecision()` allows market-cap feed routes with the `market_cap_feed_unfiltered` reason.
+
+### BusinessWire / No-Text Behavior
+
+For non-SEC sources where article text is unavailable, the pipeline should not send the item to OpenAI for full summary generation.
+
+Current intended behavior:
+
+- no article text means no website article is published
+- Discord links to the original user-facing source when available
+- NuntioBot helper URLs are not sent to Discord
+- BusinessWire headline-only items can still post as source links when appropriate
+
+### Off-Hours Test Result
+
+Because the market was closed, the new 30M-to-50M channel was tested with a stored local event instead of the live Discord watcher.
+
+Tested stored event:
+
+- ticker: `GMM`
+- market cap: `44.6 M`
+- forced route tag: `market_cap_30m_to_50m`
+- source mode: cached Nuntio article text, then website publish
+
+Result:
+
+- website publish succeeded
+- Discord minimal post succeeded in the new 30M-to-50M channel
+- live article URL returned HTTP 200:
+  - `https://traderslink.pro/news/GMM/gmm-s-gausspeed-links-to-150k-3d-asset-library-via-nvidia-omniverse-openusd-2026-05-24`
+
+Operational note:
+
+- the first test attempt failed with Discord `401 Invalid Webhook Token` because the local `.env.press_release_v2` webhook line had extra env settings appended onto the same line
+- the local env line was corrected so `MARKET_CAP_30M_TO_50M_WEBHOOK_URL`, `MARKET_CAP_30M_TO_50M_MIN`, and `MARKET_CAP_30M_TO_50M_LIMIT` are separate lines
+
+Verification run:
+
+- `node --check` on changed JavaScript files
+- `node current_feature_regression_check.js`
+  - passed `24/24`
+- `node smoke_test_v2.js`
+  - passed `21/21`
 
 PR-financing work has now started.
 

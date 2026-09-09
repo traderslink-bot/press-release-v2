@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-2026-07-03-aapl",
+    "ticker": "AAPL",
+    "title": "Example headline for local moomoo dry-run only",
+    "summary": "This example item exists only to validate the moomoo Community compose flow in dry-run mode. Do not use it for live posting.",
+    "message": "$AAPL Example headline for local moomoo dry-run only\n\nThis example item exists only to validate the moomoo Community compose flow in dry-run mode. Do not use it for live posting.",
+    "scheduledAt": "2026-01-01T00:00:00.000Z",
+    "source": "manual_dry_run",
+    "status": "pending",
+    "postedAt": "",
+    "error": ""
+  }
+]
