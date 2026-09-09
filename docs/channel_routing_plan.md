@@ -1,5 +1,14 @@
 # Channel Routing Plan
 
+## September 9 app delivery repair
+
+Owner-authorized progress: [Newsfilter app recovery](newsfilter-app-recovery-2026-09-09.md).
+Only eligible Discord alerts with a completed AI summary are published to the app. An unavailable AI summary must not create a TradersLink article.
+
+### AI-summary routing
+
+Publish a TradersLink article only when OpenAI generated a summary. When no AI summary exists, keep the normal destination route and post the original source URL in Discord with only `Summary could not be generated.` as the summary line. Do not create, link, or route a TradersLink article without an AI summary. This runs only in the local Press Release watcher and requires coordinator-sequenced runner activation.
+
 ## News Filtered
 
 The current primary v2 Discord channel is called News Filtered. It is for cleaner day-trade opportunity candidates.
@@ -57,9 +66,11 @@ When `NEWS_ARTICLE_API_URL` and `NEWS_PUBLISH_TOKEN` are configured, market-cap 
 3. publish the article to `traderslink.pro/news`
 4. send a minimal Discord post with ticker metadata, headline, and website article link
 
-If no article text is available for a non-SEC source, the bot skips the website article and links Discord directly to the user-facing original source when one exists. NuntioBot helper URLs should not be sent to end users.
+If an AI summary is unavailable for a non-SEC source, the bot skips the website article and links Discord directly to the user-facing original source when one exists. NuntioBot helper URLs should not be sent to end users.
 
 ## Design Direction
+
+Completed locally: [Newsfilter request spacing](newsfilter-request-spacing-2026-09-09.md) serializes article requests with a random 5–8 second cooldown. Runtime activation remains pending coordinator sequencing.
 
 Keep routing as separate decisions:
 
