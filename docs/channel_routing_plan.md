@@ -3,11 +3,11 @@
 ## September 9 app delivery repair
 
 Owner-authorized progress: [Newsfilter app recovery](newsfilter-app-recovery-2026-09-09.md).
-Only eligible Discord alerts with a completed AI summary are published to the app. An unavailable AI summary must not create a TradersLink article.
+Every post accepted for Discord is also published to the app. A post filtered from Discord, including PR Drop, is published to neither destination.
 
 ### AI-summary routing
 
-Publish a TradersLink article only when OpenAI generated a summary. When no AI summary exists, keep the normal destination route and post the original article title with its direct source URL in Discord so Discord can render the source article tile. Do not create, link, or route a TradersLink article without an AI summary. This runs only in the local Press Release watcher and requires coordinator-sequenced runner activation.
+Use one shared eligibility decision for Discord and the TradersLink app. When an accepted post has no AI summary, store a null summary with empty positives and negatives; the app detail card links directly to the source article while Discord uses the original title and source URL. This requires coordinator-sequenced runner activation.
 
 ## News Filtered
 
